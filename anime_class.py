@@ -3,6 +3,8 @@ from user_class import User  # will need when we'll take user's data into consid
 
 class Anime:
     def __init__(self, setting, genre):
+        if not isinstance(setting, str) or not isinstance(genre, str):
+            raise ValueError
         self.setting = setting
         self.genre = genre
 
